@@ -13,6 +13,7 @@ Gemfile.local
 Gemfile.lock
 Makefile
 Vagrantfile.local
+doc/app*
 config/database~custom.yml
 config/geocoder_api_keys.yml
 config/mongrel_cluster.yml
