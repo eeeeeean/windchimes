@@ -17,8 +17,6 @@
     <% end %>
 
     <%= f.input :url, :label => "Web Link" %>
-    <%= f.input :email %>
-    <%= f.input :telephone %>
     <%= f.input :wifi, :label => "This venue has public wireless internet access" %>
     <%= f.input :description,
                 :input_html => {:rows => 12},
@@ -26,8 +24,6 @@
     <%= f.input :access_notes,
                 :input_html => {:rows => 4},
                 :hint => "(Details about how to access the space, and any accessibility restrictions that visitors may want to know about.)" %>
-
-    <%= f.input(:closed, :label => "This venue is no longer open for business") unless venue.new_record? %>
 
     <%= f.input :tag_list, :required => false,
                 :label => 'Tags',
