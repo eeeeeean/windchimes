@@ -15,7 +15,7 @@
 
 #global_header {
   background: none repeat scroll 0 0 #82C555;
-  height: 80px;
+  height: 40px;
   position: relative;
 }
 
@@ -132,6 +132,14 @@
 textarea {
   width: 165px;
   height: 6em;
+}
+
+#windchimes_title {
+  height: 31px;
+  left: 40px;
+  overflow: hidden;
+  top: 25px;
+  width: 135px;
 }
 
 .contentbar {
