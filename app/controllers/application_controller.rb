@@ -20,14 +20,23 @@ protected
   # Returns a data structure used for telling the CSS menu which part of the
   # site the user is on. The structure's keys are the symbol names of resources
   # and their values are either "active" or nil.
+#  def link_class
+#    return @_link_class_cache ||= {
+#      :events => (( controller_name == 'events' ||
+#                    controller_name == 'sources' ||
+#                    controller_name == 'site')  && 'active'),
+#      :venues => (controller_name == 'venues'  && 'active'),
+#    }
+#  end
+
   def link_class
+    path = request.env['PATH_INFO']
     return @_link_class_cache ||= {
-      :events => (( controller_name == 'events' ||
-                    controller_name == 'sources' ||
-                    controller_name == 'site')  && 'active'),
-      :venues => (controller_name == 'venues'  && 'active'),
+      :events => (path == '/venues/map' && 'active'),
+      :venues => (path != '/venues/map' && 'active')
     }
   end
+  
   helper_method :link_class
 
   #---[ Misc ]------------------------------------------------------------

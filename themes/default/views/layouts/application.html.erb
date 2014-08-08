@@ -48,28 +48,19 @@
   <div id="outer">
     <div id="global_header">
       <a href="/" id="project_title"><%= SETTINGS.name %></a>
-
+	<h1 id="windchimes_title">
+		<%=link_to "Wind Chimes", controller: "venues", action: "map" %>
+	</h1>
       <div id="top_menu">
          <div id='app_menu'>
           <ul>
               <li class='<%=link_class[:events]%>'><%= link_to "Map", controller: "venues", action: "map" %></li>
-              <li class='<%=link_class[:venues]%>'><%= link_to "Text", venues_path %></li>
+              <li class='<%=link_class[:venues]%>'><%= link_to "Details", venues_path %></li>
           </ul>
         </div>
-        <div id='project_menu'>
-          <strong>Get Involved:</strong> <%= link_to "Blog", "http://calagator.wordpress.com/", {:class => 'first'} %> | <%= link_to "Forum", "http://groups.google.com/group/pdx-tech-calendar/" %> | <%= link_to "Code", "https://github.com/calagator/calagator" %>
-          <br />
-          <strong>Something not right?</strong> <%= link_to "File an issue", "https://github.com/calagator/calagator/issues" %>
-        </div>
+        
         <%= form_tag '/events/search', :method => :get do %>
-          <div id='search_form'>
-          <label for="search_field">Search Events</label>
-          <% if request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"].include?("Safari") %>
-            <input type="search" name="query" value="<%= @query %>" results="5" id="search_field">
-          <% else %>
-            <%= text_field_tag 'query', @query, :id => 'search_field' %>
-          <% end %>
-          </div>
+          
         <% end -%>
       </div>
     </div>
@@ -87,7 +78,7 @@
     </div>
 
     <div id="top_footer">
-      <%= URI.parse(SETTINGS.url).host %>
+     This site owes its existence to the code that makes <a href="https://github.com/calagator/calagator">calagator.org</a>work. Thanks guys.
       <%= source_code_version %>
       &nbsp;
       &nbsp;
