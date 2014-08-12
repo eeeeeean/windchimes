@@ -65,6 +65,7 @@ gem 'mofo', path: 'vendor/gems/mofo-0.2.8' # vendored fork with hpricot dependen
 gem 'sunspot_rails', '2.1.1'
 gem 'sunspot_solr',  '2.1.1'
 gem 'lucene_query', '0.1'
+gem 'rails_12factor'
 
 platform :jruby do
   gem 'activerecord-jdbc-adapter'

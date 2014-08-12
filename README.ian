@@ -5,3 +5,7 @@ I need to change the css for mobile for the title
       <a href="/" id="project_title"><%= SETTINGS.name %></a>
 taken from application...
 
+git clone git@heroku.com:windchimes.git -o heroku
+
+
+
