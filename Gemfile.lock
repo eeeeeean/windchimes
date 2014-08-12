@@ -157,7 +157,7 @@ GEM
       activerecord (= 3.2.19)
       activeresource (= 3.2.19)
       activesupport (= 3.2.19)
-      bundler (~> 1.0)
+      bundler
       railties (= 3.2.19)
     rails_12factor (0.0.2)
       rails_serve_static_assets
