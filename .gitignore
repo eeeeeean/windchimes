@@ -11,7 +11,6 @@
 .rvmrc
 .vagrant
 Gemfile.local
-Gemfile.lock
 Makefile
 Vagrantfile.local
 doc/app*
